@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implustec - Enterprise Tech & AI Solutions</title>
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Styles -->
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <i class="fa-solid fa-cube"></i> IMPLUSTEC
+    </div>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#ai-lab">IA Lab</a></li>
+      <li><a href="#precios">Planes</a></li>
+      <li><a href="#cotizador">Calculadora</a></li>
+    </ul>
+    <a href="#cotizador" class="btn btn-cyan">Iniciar Proyecto</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-badge"><i class="fa-solid fa-bolt"></i> SIEMPRE ACTIVA</div>
+    <h1>Desarrollo Y Creatividad <br><span class="neon-text-cyan">Desarrollo Web</span>, <span class="neon-text-violet">Desarrollo Móvil</span> & <span class="neon-text-green">Contenido Creativo</span></h1>
+    <p>Construimos infraestructuras digitales avanzadas. Desde aplicaciones web y móviles escalables hasta la integración profunda de LLMs y contenido multimedia vanguardista.</p>
+    <div class="hero-buttons">
+      <a href="#servicios" class="btn btn-cyan">Explorar Ecosistema</a>
+      <a href="#cotizador" class="btn btn-violet">Presupuesto Inmediato</a>
+    </div>
+  </section>
+
+  <!-- TICKER INFINITO DE TECNOLOGÍAS -->
+  <div class="ticker-wrap">
+    <div class="ticker-move">
+      <div class="ticker-item"><i class="fa-brands fa-python"></i> Python / Flask</div>
+      <div class="ticker-item"><i class="fa-brands fa-js"></i> JavaScript / Node</div>
+      <div class="ticker-item"><i class="fa-brands fa-php"></i> PHP</div>
+      <div class="ticker-item"><i class="fa-brands fa-swift"></i> Swift iOS</div>
+      <div class="ticker-item"><i class="fa-solid fa-brain"></i> Gemini / ChatGPT / Claude</div>
+      <div class="ticker-item"><i class="fa-solid fa-database"></i> PostgreSQL / MongoDB</div>
+      <div class="ticker-item"><i class="fa-brands fa-figma"></i> Figma / UX Design</div>
+      <div class="ticker-item"><i class="fa-solid fa-video"></i> VEO / Filmora</div>
+      <!-- Duplicado para loop suave -->
+      <div class="ticker-item"><i class="fa-brands fa-python"></i> Python / Flask</div>
+      <div class="ticker-item"><i class="fa-brands fa-js"></i> JavaScript / Node</div>
+      <div class="ticker-item"><i class="fa-brands fa-php"></i> PHP</div>
+      <div class="ticker-item"><i class="fa-brands fa-swift"></i> Swift iOS</div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: METRICAS Y METRICAS DE IMPACTO (NUEVA) -->
+  <section>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number neon-text-cyan">+2</div>
+        <p>Años trabajando</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number neon-text-violet">+35</div>
+        <p>Proyectos Completados</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number neon-text-green">4</div>
+        <p>Aplicaciones Activas</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number neon-text-cyan">100%</div>
+        <p>Atención Directa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: SERVICIOS POR PESTAÑAS -->
+  <section id="servicios">
+    <h2 class="section-title">Servicios <span class="neon-text-cyan">Especializados</span></h2>
+    <p class="section-subtitle">Arquitectura técnica integral dividida por áreas de dominio.</p>
+
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="openTab(event, 'sw')">Ingeniería de Software</button>
+      <button class="tab-btn" onclick="openTab(event, 'ai')">IA & BI</button>
+      <button class="tab-btn" onclick="openTab(event, 'design')">Diseño UX/UI & 3D</button>
+      <button class="tab-btn" onclick="openTab(event, 'media')">Marketing & Multimedia</button>
+    </div>
+
+    <div id="sw" class="tab-content active">
+      <div class="glass-card">
+        <i class="fa-solid fa-code card-icon" style="font-size:2rem; color:var(--primary-cyan); margin-bottom:15px;"></i>
+        <h3>Plataformas Web (CRM/CMS)</h3>
+        <p>Sistemas de gestión empresarial construidos en Python, Flask y PHP con soporte para alta concurrencia.</p>
+      </div>
+      <div class="glass-card">
+        <i class="fa-solid fa-mobile-screen card-icon" style="font-size:2rem; color:var(--primary-cyan); margin-bottom:15px;"></i>
+        <h3>Apps Móviles & Desktop</h3>
+        <p>Desarrollo nativo en Swift para iOS y aplicaciones multiplataforma con .NET y TKinter.</p>
+      </div>
+      <div class="glass-card">
+        <i class="fa-solid fa-database card-icon" style="font-size:2rem; color:var(--primary-cyan); margin-bottom:15px;"></i>
+        <h3>Bases de Datos & E-Commerce</h3>
+        <p>Modelado de datos en MySQL, MongoDB y PostgreSQL. Integración de pasarelas y tiendas en línea.</p>
+      </div>
+    </div>
+
+    <div id="ai" class="tab-content">
+      <div class="glass-card">
+        <i class="fa-solid fa-robot card-icon" style="font-size:2rem; color:var(--primary-violet); margin-bottom:15px;"></i>
+        <h3>Integración de LLMs</h3>
+        <p>Implementación de APIs avanzadas de ChatGPT, Gemini y Claude para automatizar flujos corporativos.</p>
+      </div>
+      <div class="glass-card">
+        <i class="fa-solid fa-chart-pie card-icon" style="font-size:2rem; color:var(--primary-violet); margin-bottom:15px;"></i>
+        <h3>Business Intelligence</h3>
+        <p>Transformación de datos crudos en dashboards ejecutivos para decisiones analíticas en tiempo real.</p>
+      </div>
+      <div class="glass-card">
+        <i class="fa-solid fa-wand-magic-sparkles card-icon" style="font-size:2rem; color:var(--primary-violet); margin-bottom:15px;"></i>
+        <h3>Generación Sintética</h3>
+        <p>Uso de herramientas avanzadas como Pomelli y VEO para la creación automatizada de medios con IA.</p>
+      </div>
+    </div>
+
+    <div id="design" class="tab-content">
+      <div class="glass-card">
+        <i class="fa-solid fa-cube card-icon" style="font-size:2rem; color:var(--primary-green); margin-bottom:15px;"></i>
+        <h3>Modelado 2D / 3D</h3>
+        <p>Renders y activos 3D interactivos optimizados para la web, presentaciones y prototipos visuales.</p>
+      </div>
+      <div class="glass-card">
+        <i class="fa-solid fa-figma card-icon" style="font-size:2rem; color:var(--primary-green); margin-bottom:15px;"></i>
+        <h3>Diseño UX/UI Premium</h3>
+        <p>Prototipado interactivo de alta fidelidad utilizando Figma y Adobe XD enfocado en la conversión.</p>
+      </div>
+      <div class="glass-card">
+        <i class="fa-solid fa-palette card-icon" style="font-size:2rem; color:var(--primary-green); margin-bottom:15px;"></i>
+        <h3>Diseño Gráfico Vectorial</h3>
+        <p>Ilustración corporativa e identidad de marca elaborada en Adobe Illustrator, Photoshop y Canva.</p>
+      </div>
+    </div>
+
+    <div id="media" class="tab-content">
+      <div class="glass-card">
+        <i class="fa-solid fa-film card-icon" style="font-size:2rem; color:var(--primary-cyan); margin-bottom:15px;"></i>
+        <h3>Producción de Video</h3>
+        <p>Edición profesional de contenido promocional y motion graphics utilizando Wondershare Filmora.</p>
+      </div>
+      <div class="glass-card">
+        <i class="fa-solid fa-bullseye card-icon" style="font-size:2rem; color:var(--primary-cyan); margin-bottom:15px;"></i>
+        <h3>Marketing Digital</h3>
+        <p>Estrategias de posicionamiento en buscadores, anuncios pautados y embudos de adquisición masiva.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: DEMO INTERACTIVO DE IA (NUEVA) -->
+  <section id="ai-lab" style="background: rgba(0,0,0,0.3);">
+    <h2 class="section-title">Implustec <span class="neon-text-violet">AI Lab</span></h2>
+    <p class="section-subtitle">Prueba en vivo la respuesta de un pipeline entrenado con la stack de Implustec.</p>
+
+    <div class="ai-demo-box">
+      <h4><i class="fa-solid fa-terminal"></i> Consola Prompt de Ejemplo</h4>
+      <p style="color:var(--text-muted); font-size:0.9rem; margin-top:5px;">Escribe una consulta de prueba para el modelo sintético:</p>
+      <div class="ai-input-group">
+        <input type="text" id="ai-prompt" class="ai-input" placeholder="Ej: Analizar datos de ventas con Python...">
+        <button class="btn btn-violet" onclick="runAiDemo()">Procesar</button>
+      </div>
+      <div id="ai-output" class="ai-response"></div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: PORTAFOLIO DE PROYECTOS (NUEVA) -->
+  <section id="portafolio">
+    <h2 class="section-title">Portafolio <span class="neon-text-cyan">Destacado</span></h2>
+    <p class="section-subtitle">Casos donde convergieron el código, la IA y el diseño.</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">RTX Sphere Framework</span>
+          <h3>Ecosistema Web con integración de soluciones para PyMEs.</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem;">PHP &bull; MySQL &bull; JS</p>
+          <a href="#cotizador" class="btn btn-cyan">Solicitar Demo</a>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">Drinnova!</span>
+          <h3>Suite Profesional para gestión empresarial.</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem;">Flask &bull; MySQL &bull; JS</p>
+          <a href="#cotizador" class="btn btn-cyan">Solicitar Demo</a>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">MagenTAP</span>
+          <h3>Punto de Venta Advanced.</h3>
+          <p style="color:var(--text-muted); font-size:0.85rem;">Flask &bull; MySQL &bull; Tailwind CSS</p>
+          <a href="#cotizador" class="btn btn-cyan">Solicitar Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: ARQUITECTURA DE DATOS / FLUJO TÉCNICO (NUEVA) -->
+  <section style="background: rgba(0,0,0,0.3);">
+    <h2 class="section-title">Arquitectura <span class="neon-text-green">Integrada</span></h2>
+    <p class="section-subtitle">Cómo se conectan nuestras tecnologías en un proyecto enterprise.</p>
+
+    <div class="arch-grid">
+      <div class="arch-box">
+        <h4 class="neon-text-cyan">Frontend / UI</h4>
+        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:10px;">HTML5, CSS3, JS, Figma, Swift</p>
+      </div>
+      <div class="arch-box">
+        <h4 class="neon-text-violet">API / Core</h4>
+        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:10px;">Python, Flask, .NET, PHP</p>
+      </div>
+      <div class="arch-box">
+        <h4 class="neon-text-green">Intelligence</h4>
+        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:10px;">Gemini, ChatGPT, VEO, BI Tools</p>
+      </div>
+      <div class="arch-box">
+        <h4 class="neon-text-cyan">Data Layer</h4>
+        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:10px;">PostgreSQL, MySQL, MongoDB</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: TABLA DE PLANES / ESTIMADOS (NUEVA) -->
+  <section id="precios">
+    <h2 class="section-title">Planes de <span class="neon-text-violet">Desarrollo</span></h2>
+    <p class="section-subtitle">Escalas de trabajo adaptadas al volumen de tu empresa.</p>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Startup Pack</h3>
+        <div class="price-val neon-text-cyan">$1,200</div>
+        <ul class="price-features">
+          <li>Aplicación Web Basica (CMS)</li>
+          <li>Diseño UX/UI en Figma</li>
+          <li>Base de Datos MySQL</li>
+          <li>Soporte Técnico 30 Días</li>
+        </ul>
+        <a href="#cotizador" class="btn btn-cyan">Seleccionar</a>
+      </div>
+      <div class="price-card featured">
+        <div style="position:absolute; top:-12px; right:20px; background:var(--primary-cyan); color:#000; padding:2px 10px; border-radius:10px; font-weight:bold; font-size:0.75rem;">POPULAR</div>
+        <h3>Enterprise AI</h3>
+        <div class="price-val neon-text-violet">$2,800</div>
+        <ul class="price-features">
+          <li>Web App + CRM en Python/Flask</li>
+          <li>Integración con Gemini/ChatGPT</li>
+          <li>App Móvil (Swift / iOS)</li>
+          <li>Dashboard de Business Intelligence</li>
+        </ul>
+        <a href="#cotizador" class="btn btn-violet">Seleccionar</a>
+      </div>
+      <div class="price-card">
+        <h3>3D & Media Suite</h3>
+        <div class="price-val neon-text-green">$1,900</div>
+        <ul class="price-features">
+          <li>Modelado 2D / 3D Completo</li>
+          <li>Producción de Video (Filmora)</li>
+          <li>Marketing Digital Estratégico</li>
+          <li>Identidad Visual Adobe Suite</li>
+        </ul>
+        <a href="#cotizador" class="btn btn-cyan">Seleccionar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: TESTIMONIOS Y SOCIAL PROOF (NUEVA) -->
+  <section style="background: rgba(0,0,0,0.3);">
+    <h2 class="section-title">Casos de <span class="neon-text-green">Éxito</span></h2>
+    <p class="section-subtitle">Opiniones de líderes que transformaron su operación con Implustec.</p>
+
+    <div class="testimonial-grid">
+      <div class="glass-card">
+        <div class="client-avatar">CEO</div>
+        <p style="font-style:italic; color:var(--text-muted);">"La integración de modelos de IA con nuestra base de datos PostgreSQL redujo el tiempo de procesamiento de clientes en un 70%."</p>
+        <h4 style="margin-top:15px; font-size:0.95rem;">- Director de Operaciones Tech</h4>
+      </div>
+      <div class="glass-card">
+        <div class="client-avatar" style="background:var(--primary-cyan); color:#000;">UX</div>
+        <p style="font-style:italic; color:var(--text-muted);">"El rediseño visual de nuestras aplicaciones móviles y los renders 3D le dieron una imagen cibernética y moderna a la marca."</p>
+        <h4 style="margin-top:15px; font-size:0.95rem;">- Líder de Producto Digital</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE COTIZACIÓN INTERACTIVA -->
+  <section id="cotizador">
+    <h2 class="section-title">Cotizador <span class="neon-text-cyan">Dinamico</span></h2>
+    <p class="section-subtitle">Selecciona las tecnologías y servicios para calcular una estimación.</p>
+
+    <div class="calc-container">
+      <div class="calc-option">
+        <label><input type="checkbox" value="18999" onchange="calculateTotal()"> Aplicación Web/CRM/CMS &bull; Python/Flask/PHP/MySQL</label>
+        <span>+$18999 MXN</span>
+      </div>
+      <div class="calc-option">
+        <label><input type="checkbox" value="25999" onchange="calculateTotal()"> Aplicación Móvil Nativa &bull; Swift/iOS</label>
+        <span>+$25999 MXN</span>
+      </div>
+      <div class="calc-option">
+        <label><input type="checkbox" value="8999" onchange="calculateTotal()"> Integración de LLMs &bull; Gemini/ChatGPT/Claude</label>
+        <span>+$8999 MXN</span>
+      </div>
+      <div class="calc-option">
+        <label><input type="checkbox" value="7999" onchange="calculateTotal()"> Modelado 2D/3D &bull; Producción de Video</label>
+        <span>+$7999 MXN</span>
+      </div>
+      <div class="calc-option">
+        <label><input type="checkbox" value="6999" onchange="calculateTotal()"> Dashboard Business Intelligence & Base de Datos</label>
+        <span>+$6999 MXN</span>
+      </div>
+      <div class="calc-option">
+        <label><input type="checkbox" value="5999" onchange="calculateTotal()"> Estrategia de Marketing Digital & Branding</label>
+        <span>+$5999 MXN</span>
+      </div>
+
+      <div style="text-align:center; margin-top:30px; font-size:2.2rem; font-weight:bold;">
+        Total Estimado: <span id="total-val" class="neon-text-cyan">$0 MXN</span>
+      </div>
+      <div style="text-align:center; margin-top:25px;">
+        <button class="btn btn-cyan" onclick="alert('Solicitud enviada a los ingenieros de Implustec.')">Enviar Especificaciones</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 8: PREGUNTAS FRECUENTES FAQ (NUEVA) -->
+  <section style="background: rgba(0,0,0,0.3);">
+    <h2 class="section-title">Preguntas <span class="neon-text-violet">Frecuentes</span></h2>
+    <p class="section-subtitle">Respuestas rápidas a las dudas más comunes de nuestros clientes.</p>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Pueden conectar modelos de IA con mis bases de datos actuales?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Sí. Integramos APIs de Gemini, ChatGPT y Claude con bases de datos MySQL, PostgreSQL y MongoDB de manera segura mediante túneles de desarrollo.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué tecnologías usan para desarrollo móvil y de escritorio?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Utilizamos Swift para el ecosistema nativo iOS y .NET / TKinter para aplicaciones rápidas de escritorio orientadas a entornos corporativos.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué tecnologías usan para desarrollo web?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Utilizamos PHP/Flask/.NET para el ecosistema nativo Web.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Cúanto tiempo tarda un proyecto?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          La duración de los proyectos siempre varía de acuerdo con los requerimientos del cliente. Aún así, nosotros nos comprometemos con la puntualidad y profesionalidad de cada uno.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿También hacen logos?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Si, también hacemos logotipos para tu/tus negocios además del contenido creativo :D.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          ¿Por qué no tienen formulario de contacto todavía?
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Porque nuestro desarrollador dice que queda mañana :p
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER AMPLIADO -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:15px;">
+          <i class="fa-solid fa-cube"></i> IMPLUSTEC
+        </div>
+        <p style="color:var(--text-muted); font-size:0.85rem;">Ingeniería de software de vanguardia, Inteligencia Artificial aplicada y producción multimedia.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tecnologías</h4>
+        <ul>
+          <li><a href="#">Python/Flask</a></li>
+          <li><a href="#">PHP</a></li>
+          <li><a href="#">Javascript</a></li>
+          <li><a href="#">Swift</a></li>
+          <li><a href="#">Kotlin</a></li>
+          <li><a href="#">LLMs & Gemini AI</a></li>
+          <li><a href="#">MySQL/PostgreSQL/MongoDB</a></li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">Wordpress</a></li>
+          <li><a href="#">Shopify</a></li>
+          <li><a href="#">Tiendanube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Diseño & Media</h4>
+        <ul>
+          <li><a href="#">Modelado 3D</a></li>
+          <li><a href="#">Figma UX/UI</a></li>
+          <li><a href="#">Wondershare Filmora</a></li>
+          <li><a href="#">Adobe Illustrator</a></li>
+          <li><a href="#">Canva</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p style="color:var(--text-muted); font-size:0.9rem;">implustec@gmail.com</p>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-top:5px;">+52 55 4803 6516</p>
+      </div>
+    </div>
+    <div style="text-align:center; border-top:1px solid rgba(255,255,255,0.05); padding-top:20px; color:var(--text-muted); font-size:0.85rem;">
+      &copy; 2026 Implustec. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC -->
+  <script src="./main.js"></script>
+</body>
+</html>
